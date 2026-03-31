@@ -60,12 +60,13 @@ struct ContentView: View {
                 Text("删除按钮")
             }
 
-            // 8. confirm 角色
-            Button(role: .confirmation) {
+            // 8. 强调操作（macOS 上无 ButtonRole.confirmation，用 borderedProminent 表示主确认）
+            Button {
                 print("确认")
             } label: {
                 Text("确认按钮")
             }
+            .buttonStyle(.borderedProminent)
         }
         .padding()
     }
